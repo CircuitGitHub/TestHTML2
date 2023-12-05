@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway";
+    min-height: 90vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 25px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+img {
+    aspect-ratio: 1;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #4d4d4d;
+    margin: 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "image details" ;
+    grid-gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #212121;
+    width: min-content;
+    min-width: 250px;
+}
+
+.card:hover {
+    background-color: #434343;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.card .image {
+    grid-area: image;
+}
+
+.card .details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .text {
+    grid-column: span 2;
+}
+
+.card p,
+.card h3,
+.card h2 {
+    margin: 0;
+}
+
+.card h2{
+    margin-bottom: 8px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.card:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.card:nth-child(3) {
+    transition-delay: 200ms;
+}
